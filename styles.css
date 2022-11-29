@@ -1,0 +1,173 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url("https://fonts.google.com/specimen/Overpass");
+
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+	--clr-primary: hsl(25, 97%, 53%);
+	--clr-grey-light: hsl(217, 12%, 63%);
+	--MediumGrey: hsl(216, 12%, 54%);
+	--DarkBlue: hsl(213, 19%, 18%);
+	--VeryDarkBlue: hsl(216, 12%, 8%);
+	--btnBgColor: hsl(213, 19%, 23%);
+	--White: hsl(0, 0%, 100%);
+	--ff-primary: "Overpass", sans-serif;
+	--transition: all 0.3s linear;
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4 {
+	text-transform: capitalize;
+}
+body {
+	font-family: var(--ff-primary);
+	background: var(--VeryDarkBlue);
+	color: var(--White);
+	line-height: 1.5;
+}
+ul {
+	list-style-type: none;
+}
+a {
+	text-decoration: none;
+}
+img:not(.icon) {
+	width: 100%;
+	display: block;
+}
+
+p {
+	font-size: 15px;
+	color: var(--clr-grey-light);
+}
+/* fonts for 800 and above */
+@media screen and (min-width: 800px) {
+}
+
+.container {
+	min-height: 100vh;
+	min-width: 100vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.card {
+	padding: 2rem;
+	border-radius: 15px;
+	border: transparent;
+	background-color: var(--DarkBlue);
+	height: 25rem;
+	width: 25rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.icon-container {
+	margin-top: 1rem;
+}
+.icon-bg {
+	width: 2.75rem;
+	height: 2.75rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--btnBgColor);
+	border-radius: 50%;
+}
+.text-container h2 {
+	padding-bottom: 1rem;
+}
+.rating-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.rating-btn {
+	display: inline;
+	width: 2.75rem;
+	height: 2.75rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: hsl(213, 19%, 23%);
+	border-radius: 50%;
+	border: none;
+	color: white;
+	cursor: pointer;
+	transition: var(--transition);
+}
+.hov:hover {
+	background-color: var(--MediumGrey);
+}
+
+.submit-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.submit-btn {
+	width: 100%;
+	border: none;
+	padding: 0.75rem;
+	color: white;
+	background-color: var(--clr-primary);
+	border-radius: 2rem;
+	cursor: pointer;
+	transition: var(--transition);
+}
+.submit-btn:hover {
+	background-color: var(--White);
+	color: var(--clr-primary);
+}
+/* thank you part */
+
+.ty-bg {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.ty-text {
+	text-align: center;
+	margin-bottom: 1rem;
+}
+.hidden {
+	display: none;
+}
+.rating-text {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.rating-text p {
+	color: var(--clr-primary);
+	border-radius: 2rem;
+	background-color: var(--btnBgColor);
+	padding: 0.25rem 1.25rem;
+}
+.orange-bg {
+	background-color: var(--clr-primary);
+}
